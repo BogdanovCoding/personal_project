@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <h1>This is the FOREX page</h1>
+    <br>
+    <button onclick="window.location.href = '{% url 'welcome' %}';">Go to welcome screen</button>
+    <br>
+    <button onclick="window.location.href = '{% url 'stocks' %}';">Go to stocks screen</button>
+    <br>
+    <button onclick="window.location.href = '{% url 'forex' %}';">REFRESH PRICES</button>
+    <br>
+    <br>
+    <br>
+    <h5>All prices are in base currency EUR as free api allows only EUR for base for free...</h5>
+    {% for item in forex_pairs %}
+    {{ item }}
+  </br>
+    {% endfor %}
+    <script src="" async defer></script>
+  </body>
+</html>
+

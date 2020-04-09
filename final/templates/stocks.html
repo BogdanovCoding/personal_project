@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <h1>This is the STOCKS page</h1>
+    <br>
+    <button onclick="window.location.href = '{% url 'welcome' %}';">Go to welcome screen</button>
+    <br>
+    <button onclick="window.location.href = '{% url 'forex' %}';">Go to forex screen</button>
+    <br>
+    <form>
+      <p>Stock to check: <input type="text" name="get_stock_api"></p>
+      <p><input type="submit" value="submit"></p>
+  </form>
+
+  {% if get_stock_quote %}
+    {{get_stock_quote}}
+  {% else %}
+    Please type name of stock you wish to quote...
+  {% endif %}
+
+    <script src="" async defer></script>
+  </body>
+</html>
+
